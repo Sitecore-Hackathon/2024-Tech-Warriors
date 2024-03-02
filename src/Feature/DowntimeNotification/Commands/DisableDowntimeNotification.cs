@@ -39,18 +39,18 @@ namespace DowntimeNotification.Commands
                         if (downtimeItem != null)
                         {
                             ItemHelper.UpdateNotificationItem(downtimeItem, string.Empty, string.Empty, string.Empty, string.Empty, string.Empty, "0");
-                            SheerResponse.Alert("Downtime Notification has been disabled");
+                            SheerResponse.Alert(Constants.DowntimeNotificationDisabled);
                         }
                         else
                         {
-                            SheerResponse.Alert("Downtime Notification must be enabled before to disable the notification");
+                            SheerResponse.Alert(Constants.DowntimeNotificationItemCheck);
                         }
                     }
                 }
             }
             else
             {
-                SheerResponse.YesNoCancel("Are you sure you would like to disable notification message", "600px", "125px");
+                SheerResponse.YesNoCancel(Constants.DowntimeNotificationDisableConfirmMessage, "600px", "125px");
                 args.WaitForPostBack();
             }
         }

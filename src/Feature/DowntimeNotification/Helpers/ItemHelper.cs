@@ -1,6 +1,7 @@
 ﻿using Sitecore.Data;
 using Sitecore.Data.Items;
 using System;
+using static DowntimeNotification.Templates.DowntimeNotificationItem;
 
 namespace DowntimeNotification.Helpers
 {
@@ -53,27 +54,27 @@ namespace DowntimeNotification.Helpers
                     notificationItem.Editing.BeginEdit();
                     if (!string.IsNullOrEmpty(title))
                     {
-                        notificationItem["Title"] = title;
+                        notificationItem[Fields.TitleFieldName] = title;
                     }
                     if (!string.IsNullOrEmpty(startTimeNotificationMessage))
                     {
-                        notificationItem["StartTimeNotificationMessage"] = startTimeNotificationMessage;
+                        notificationItem[Fields.StartTimeNotificationMessageFieldName] = startTimeNotificationMessage;
                     }
                     if (!string.IsNullOrEmpty(endTimeNotificationMessage))
                     {
-                        notificationItem["EndTimeNotificationMessage"] = endTimeNotificationMessage;
+                        notificationItem[Fields.EndTimeNotificationMessageFieldName] = endTimeNotificationMessage;
                     }
                     if (!string.IsNullOrEmpty(startTimeMaintenance))
                     {
-                        notificationItem["StartTimeMaintenance"] = startTimeMaintenance;
+                        notificationItem[Fields.StartTimeMaintenanceFieldName] = startTimeMaintenance;
                     }
                     if (!string.IsNullOrEmpty(endTimeMaintenance))
                     {
-                        notificationItem["EndTimeMaintenance"] = endTimeMaintenance;
+                        notificationItem[Fields.EndTimeMaintenanceFieldName] = endTimeMaintenance;
                     }
                     if (!string.IsNullOrEmpty(isDisabled))
                     {
-                        notificationItem["IsEnabled"] = isDisabled;
+                        notificationItem[Fields.IsEnabledFieldName] = isDisabled;
                     }
                     notificationItem.Editing.EndEdit();
                 }

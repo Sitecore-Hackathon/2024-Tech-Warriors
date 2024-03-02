@@ -37,11 +37,11 @@ namespace DowntimeNotification.Commands
                 {
                     this.CreateUpdateItem(downtimeDataResult);
                 }
-                SheerResponse.Alert("Downtime Notification has been enabled");
+                SheerResponse.Alert(Constants.DowntimeNotificationEnabled);
             }
             else
             {
-                UrlString urlString = new UrlString(UIUtil.GetUri("control:DowntimeNotification"));
+                UrlString urlString = new UrlString(UIUtil.GetUri(Constants.DowntimeNotificationDialogControl));
                 SheerResponse.ShowModalDialog(urlString.ToString(), "625px", "510px", string.Empty, true);
                 args.WaitForPostBack();
             }
@@ -63,7 +63,7 @@ namespace DowntimeNotification.Commands
                 }
                 else
                 {
-                    ItemHelper.CreateNotificationItem(db, downtimeSettingsItem, "DownTimeNofication", downtimeDataResult.Title, downtimeDataResult.StartTimeNotificationMessage, downtimeDataResult.EndTimeNotificationMessage, downtimeDataResult.StartTimeMaintenance, downtimeDataResult.EndTimeMaintenance, "1");
+                    ItemHelper.CreateNotificationItem(db, downtimeSettingsItem, Constants.DowntimeNotificationItemName, downtimeDataResult.Title, downtimeDataResult.StartTimeNotificationMessage, downtimeDataResult.EndTimeNotificationMessage, downtimeDataResult.StartTimeMaintenance, downtimeDataResult.EndTimeMaintenance, "1");
                 }
             }
         }
