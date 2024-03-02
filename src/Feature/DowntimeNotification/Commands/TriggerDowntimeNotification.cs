@@ -46,7 +46,7 @@ namespace DowntimeNotification.Commands
             Item downtimeSettingsItem = db.GetItem(Constants.DownNotificationSettingsId);
             if (downtimeSettingsItem != null)
             {
-                Item downtimeItem = downtimeSettingsItem.Children.Where(x => x.TemplateID == Templates.DowntimeNotificationItemTemplateId)?.FirstOrDefault();
+                Item downtimeItem = downtimeSettingsItem.Children.Where(x => x.TemplateID == Templates.DowntimeNotificationItem.Id)?.FirstOrDefault();
                 using (new Sitecore.SecurityModel.SecurityDisabler())
                 {
                     try
@@ -63,7 +63,7 @@ namespace DowntimeNotification.Commands
                         else
                         {
                             string itemName = $"DownTimeNofication";
-                            var template = db.GetTemplate(Templates.DowntimeNotificationItemTemplateId);
+                            var template = db.GetTemplate(Templates.DowntimeNotificationItem.Id);
                             Item newItem = downtimeSettingsItem.Add(itemName, template);
                             if (newItem != null)
                             {
