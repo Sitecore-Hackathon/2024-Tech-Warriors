@@ -50,6 +50,8 @@ Using the package installation wizard, install the Downtime Notification Module 
 
 ![alt text](image-3.png)
 
+![alt text](image-10.png)
+
 fill up this details as per your scheduled deployment activity.
 
 ![alt text](image-6.png)
