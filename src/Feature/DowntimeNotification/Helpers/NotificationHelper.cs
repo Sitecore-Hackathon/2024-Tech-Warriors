@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DowntimeNotification.Helpers
 {
@@ -21,8 +18,10 @@ namespace DowntimeNotification.Helpers
             }
         }
 
-        private Sitecore.Data.Fields.DateField StartTime;
-        private Sitecore.Data.Fields.DateField EndTime;
+        private Sitecore.Data.Fields.DateField StartTimeNotificationMessage;
+        private Sitecore.Data.Fields.DateField EndTimeNotificationMessage;
+        private Sitecore.Data.Fields.DateField StartTimeMaintenance;
+        private Sitecore.Data.Fields.DateField EndTimeMaintenance;
 
         public bool ShowNotification
         {
@@ -38,12 +37,14 @@ namespace DowntimeNotification.Helpers
                 {
                     return false;
                 }
-                StartTime = (Sitecore.Data.Fields.DateField)NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTime];
-                EndTime = (Sitecore.Data.Fields.DateField)NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTime];
+                StartTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeNotificationMessage];
+                EndTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeNotificationMessage];
+                StartTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeMaintenance];
+                EndTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeMaintenance];
 
                 var currentDateTime = Sitecore.DateUtil.ToUniversalTime(DateTime.Now);
 
-                if (currentDateTime < StartTime.DateTime || currentDateTime > EndTime.DateTime)
+                if (currentDateTime < StartTimeNotificationMessage.DateTime || currentDateTime > EndTimeNotificationMessage.DateTime)
                 {
                     return false;
                 }
@@ -55,7 +56,7 @@ namespace DowntimeNotification.Helpers
         public String GetNotificationMessage()
         {            
             var title = Sitecore.StringUtil.GetString(NotificationItem[Templates.DowntimeNotificationItem.Fields.Title], string.Empty);
-            return $"{title}: Start time: {StartTime} UTC, End time: {EndTime}";
+            return $"{title}: Start time: {StartTimeMaintenance} UTC, End time: {EndTimeMaintenance}";
         }
     }
 }

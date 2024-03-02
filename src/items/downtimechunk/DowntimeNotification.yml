@@ -2,7 +2,7 @@
 ID: "d1cf6828-07a9-4395-b44e-0a8659c008f0"
 Parent: "66738f84-31a9-43c9-9fcf-1515a849d6c5"
 Template: "8f3d8f9b-2d76-4ace-803f-35415d2b230a"
-Path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/Notification
+Path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/DowntimeNotification
 SharedFields:
 - ID: "661c7d82-2c92-47d2-b41d-afc2dc5379aa"
   Hint: Click
@@ -37,7 +37,7 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "96cdaf52-e94b-4314-85cd-be103b200fbd"
+      Value: "f0fe30a1-dac0-4be9-9249-40dacd8f405c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -50,4 +50,4 @@ Languages:
       Value: Notification
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240302T094306Z
+      Value: 20240302T144413Z

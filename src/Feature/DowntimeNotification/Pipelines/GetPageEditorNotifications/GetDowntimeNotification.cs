@@ -1,11 +1,6 @@
 ﻿using DowntimeNotification.Helpers;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines.GetPageEditorNotifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DowntimeNotification.Pipelines.GetPageEditorNotifications
 {
