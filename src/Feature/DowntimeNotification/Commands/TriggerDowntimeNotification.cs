@@ -33,11 +33,14 @@ namespace DowntimeNotification.Commands
             else
             {
                 UrlString urlString = new UrlString(UIUtil.GetUri("control:DowntimeNotification"));
-                SheerResponse.ShowModalDialog(urlString.ToString(), "600px", "350px", string.Empty, true);
+                SheerResponse.ShowModalDialog(urlString.ToString(), "625px", "510px", string.Empty, true);
                 args.WaitForPostBack();
             }
         }
-
+        /// <summary>
+        /// Creates/Updates the Notification Item
+        /// </summary>
+        /// <param name="downtimeDataResult">DowntimeNotificationFormModel</param>
         private void CreateUpdateItem(DowntimeNotificationFormModel downtimeDataResult)
         {
             Database db = Client.ContentDatabase;

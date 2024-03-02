@@ -7,6 +7,11 @@ namespace DowntimeNotification.Helpers
 {
     public static class DialogFormHelper
     {
+        /// <summary>
+        /// Parse the XML response
+        /// </summary>
+        /// <param name="result">string</param>
+        /// <returns>DowntimeNotificationFormModel</returns>
         public static DowntimeNotificationFormModel Parse(string result)
         {
             Assert.ArgumentNotNull((object)result, nameof(result));

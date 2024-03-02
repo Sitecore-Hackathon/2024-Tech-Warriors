@@ -6,6 +6,18 @@ namespace DowntimeNotification.Helpers
 {
     public static class ItemHelper
     {
+        /// <summary>
+        /// Creates the Notification Item
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="parentItem">Item</param>
+        /// <param name="itemName">string</param>
+        /// <param name="title">string</param>
+        /// <param name="startTimeNotificationMessage">string</param>
+        /// <param name="endTimeNotificationMessage">string</param>
+        /// <param name="startTimeMaintenance">string</param>
+        /// <param name="endTimeMaintenance">string</param>
+        /// <param name="isDisabled">string</param>
         public static void CreateNotificationItem(Database db, Item parentItem, string itemName, string title, string startTimeNotificationMessage, string endTimeNotificationMessage, string startTimeMaintenance, string endTimeMaintenance, string isDisabled)
         {
             var template = db.GetTemplate(Templates.DowntimeNotificationItem.Id);
@@ -22,6 +34,16 @@ namespace DowntimeNotification.Helpers
                 }
             }
         }
+        /// <summary>
+        /// Updates the Notification Item
+        /// </summary>
+        /// <param name="notificationItem">Item</param>
+        /// <param name="title">string</param>
+        /// <param name="startTimeNotificationMessage">string</param>
+        /// <param name="endTimeNotificationMessage">string</param>
+        /// <param name="startTimeMaintenance">string</param>
+        /// <param name="endTimeMaintenance">string</param>
+        /// <param name="isDisabled">string</param>
         public static void UpdateNotificationItem(Item notificationItem, string title, string startTimeNotificationMessage, string endTimeNotificationMessage, string startTimeMaintenance, string endTimeMaintenance, string isDisabled)
         {
             using (new Sitecore.SecurityModel.SecurityDisabler())

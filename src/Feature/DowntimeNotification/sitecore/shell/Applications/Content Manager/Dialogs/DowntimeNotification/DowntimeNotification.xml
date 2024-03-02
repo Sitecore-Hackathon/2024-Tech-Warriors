@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense" xmlns:shell="http://www.sitecore.net/shell">
     <DowntimeNotification>
-        <FormDialog Icon="Applications/32x32/window_view.png" Header="Downtime Notication" Text="Trigger Downtime Notification">
+        <FormDialog Icon="Applications/32x32/window_view.png" Header="Downtime Notication" Text="Configure the Downtime Notification details">
+            <Stylesheet>
+                .notification-bold-text{
+                font-weight: 700;
+                margin-bottom: 6px;
+                }
+            </Stylesheet>
             <CodeBeside Type="DowntimeNotification.Dialogs.DowntimeNotificationForm,DowntimeNotification"/>
             <Scrollbox Class="scScrollbox" Width="100%" Height="100%">
                 <div class="scInformation">
-                    <Border runat="server"  Margin="8px 0px 8px 0px">
-                        <Literal class="scMessageBarText" Text="Title for the notification message" />
-                        <Edit id="Title" name="Title" />
+                    <Border runat="server"  Margin="12px 0px 12px 0px">
+                        <Literal class="scMessageBarText notification-bold-text" Text="Configure the title for the notification message:" />
+                        <Edit id="Title" name="Title" Margin="0px 6px 0px 6px"/>
                     </Border>
-                    <Border runat="server"  Margin="8px 0px 8px 0px">
-                        <Literal class="scMessageBarText" Text="Start time for the notification message:" />
-                        <DateTimePicker id="StartTimeNotificationMessage" name="StartTimeNotificationMessage" Margin="0px 0px 0px 6px" />
+                    <Border runat="server"  Margin="12px 0px 12px 0px">
+                        <Literal class="scMessageBarText notification-bold-text" Text="Configure the start time for the notification message:" />
+                        <DateTimePicker id="StartTimeNotificationMessage" name="StartTimeNotificationMessage" Margin="0px 6px 0px 6px" />
                     </Border>
-                    <Border runat="server" Margin="8px 0px 8px 0px">
-                        <Literal class="scMessageBarText" Text="End time for the notification message: " />
-                        <DateTimePicker id="EndTimeNotificationMessage" name="EndTimeNotificationMessage" Margin="0px 0px 0px 6px" />
+                    <Border runat="server" Margin="12px 0px 12px 0px">
+                        <Literal class="scMessageBarText notification-bold-text" Text="Configure the end time for the notification message: " />
+                        <DateTimePicker id="EndTimeNotificationMessage" name="EndTimeNotificationMessage" Margin="0px 6px 0px 6px" />
                     </Border>
-                    <Border runat="server"  Margin="8px 0px 8px 0px">
-                        <Literal class="scMessageBarText" Text="Start time for the maintenance operation:" />
-                        <DateTimePicker id="StartTimeMaintenance" name="StartTimeMaintenance" Margin="0px 0px 0px 6px" />
+                    <Border runat="server"  Margin="12px 0px 12px 0px">
+                        <Literal class="scMessageBarText notification-bold-text" Text="Configure the end time for the maintenance operation:" />
+                        <DateTimePicker id="StartTimeMaintenance" name="StartTimeMaintenance" Margin="0px 6px 0px 6px" />
                     </Border>
-                    <Border runat="server" Margin="8px 0px 8px 0px">
-                        <Literal class="scMessageBarText" Text="End time for the maintenance operation: " />
-                        <DateTimePicker id="EndTimeMaintenance" name="EndTimeMaintenance" Margin="0px 0px 0px 6px" />
+                    <Border runat="server" Margin="12px 0px 12px 0px">
+                        <Literal class="scMessageBarText notification-bold-text" Text="Configure the end time for the maintenance operation: " />
+                        <DateTimePicker id="EndTimeMaintenance" name="EndTimeMaintenance" Margin="0px 6px 0px 6px" />
                     </Border>
                 </div>
             </Scrollbox>
