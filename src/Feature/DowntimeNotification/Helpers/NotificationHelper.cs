@@ -34,15 +34,15 @@ namespace DowntimeNotification.Helpers
                     return false;
                 }
 
-                var enabled = Sitecore.MainUtil.GetBool(NotificationItem[Templates.DowntimeNotificationItem.Fields.IsEnabled], false);
+                var enabled = Sitecore.MainUtil.GetBool(NotificationItem[Templates.DowntimeNotificationItem.Fields.IsEnabledFieldID], false);
                 if (!enabled)
                 {
                     return false;
                 }
-                StartTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeNotificationMessage];
-                EndTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeNotificationMessage];
-                StartTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeMaintenance];
-                EndTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeMaintenance];
+                StartTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeNotificationMessageFieldID];
+                EndTimeNotificationMessage = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeNotificationMessageFieldID];
+                StartTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.StartTimeMaintenanceFieldID];
+                EndTimeMaintenance = NotificationItem.Fields[Templates.DowntimeNotificationItem.Fields.EndTimeMaintenanceFieldID];
 
                 var currentDateTime = Sitecore.DateUtil.ToUniversalTime(DateTime.Now);
 
@@ -60,7 +60,7 @@ namespace DowntimeNotification.Helpers
         /// <returns>string</returns>
         public string GetNotificationMessage()
         {            
-            var title = Sitecore.StringUtil.GetString(NotificationItem[Templates.DowntimeNotificationItem.Fields.Title], string.Empty);
+            var title = Sitecore.StringUtil.GetString(NotificationItem[Templates.DowntimeNotificationItem.Fields.TitleFieldID], string.Empty);
             return $"{title}: Start time: {StartTimeMaintenance} UTC, End time: {EndTimeMaintenance} UTC";
         }
     }

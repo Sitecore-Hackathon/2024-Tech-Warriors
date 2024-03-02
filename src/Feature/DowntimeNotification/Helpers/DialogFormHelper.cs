@@ -18,31 +18,31 @@ namespace DowntimeNotification.Helpers
             DowntimeNotificationFormModel downtimeNotificationFormModel = new DowntimeNotificationFormModel();
             XElement root = XDocument.Parse(result).Root;
 
-            var title = root.Elements().Where(x => x.Name == "Title")?.FirstOrDefault();
+            var title = root.Elements().Where(x => x.Name == Constants.TitleXMLElement)?.FirstOrDefault();
             if (title != null)
             {
                 downtimeNotificationFormModel.Title = title.FirstNode.ToString();
             }
 
-            var startTimeNotifcationMessage = root.Elements().Where(x => x.Name == "StartTimeNotificationMessage")?.FirstOrDefault();
+            var startTimeNotifcationMessage = root.Elements().Where(x => x.Name == Constants.StartTimeNotificationMessageXMLElement)?.FirstOrDefault();
             if (startTimeNotifcationMessage != null)
             {
                 downtimeNotificationFormModel.StartTimeNotificationMessage = startTimeNotifcationMessage.FirstNode.ToString();
             }
 
-            var endTimeNotificationMessage = root.Elements().Where(x => x.Name == "EndTimeNotificationMessage")?.FirstOrDefault();
+            var endTimeNotificationMessage = root.Elements().Where(x => x.Name == Constants.EndTimeNotificationMessageXMLElement)?.FirstOrDefault();
             if (endTimeNotificationMessage != null)
             {
                 downtimeNotificationFormModel.EndTimeNotificationMessage = endTimeNotificationMessage.FirstNode.ToString();
             }
 
-            var startTimeMaintenance = root.Elements().Where(x => x.Name == "StartTimeMaintenance")?.FirstOrDefault();
+            var startTimeMaintenance = root.Elements().Where(x => x.Name == Constants.StartTimeMaintenanceXMLElement)?.FirstOrDefault();
             if (endTimeNotificationMessage != null)
             {
                 downtimeNotificationFormModel.StartTimeMaintenance = startTimeMaintenance.FirstNode.ToString();
             }
 
-            var endTimeMaintenance = root.Elements().Where(x => x.Name == "EndTimeMaintenance")?.FirstOrDefault();
+            var endTimeMaintenance = root.Elements().Where(x => x.Name == Constants.EndTimeMaintenanceXMLElement)?.FirstOrDefault();
             if (endTimeNotificationMessage != null)
             {
                 downtimeNotificationFormModel.EndTimeMaintenance = endTimeMaintenance.FirstNode.ToString();
