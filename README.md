@@ -24,9 +24,9 @@
 
 ⟹ Does your module rely on other Sitecore modules or frameworks?
 
-Sitecore 10 or above
-SXA
-Sitecore CLI
+-   Sitecore 10 or above
+-   SXA
+-   Sitecore CLI
 
 ## Installation instructions
 
