@@ -1,5 +1,7 @@
 ﻿if (window.jQuery) {
     function showNotification(message) {
-        alert(message);
+        if (jQuery('#downtimeNotification').length === 0) {
+            jQuery('#ContentEditor').prepend(message);
+        }
     }
 }

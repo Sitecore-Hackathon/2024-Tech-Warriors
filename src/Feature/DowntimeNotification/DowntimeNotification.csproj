@@ -39,6 +39,9 @@
     <Reference Include="Sitecore.Client">
       <HintPath>..\..\..\lib\Sitecore.Client.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.ExperienceEditor">
+      <HintPath>..\..\..\lib\Sitecore.ExperienceEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -49,10 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\Feature\DowntimeNotification.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Pipelines\GetContentEditorWarnings\GetDowntimeNotificationProcessor.cs" />
-    <Compile Include="Pipelines\RenderContentEditorHeader\GetDowntimeNotificationProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\notification.js" />
@@ -68,10 +67,14 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Dialogs\DowntimeNotificationForm.cs" />
     <Compile Include="Helpers\DialogFormHelper.cs" />
+    <Compile Include="Helpers\NotificationHelper.cs" />
     <Compile Include="Models\DowntimeNotificationFormModel.cs" />
+    <Compile Include="Pipelines\GetPageEditorNotifications\GetDowntimeNotification.cs" />
+    <Compile Include="Pipelines\RenderContentEditorHeader\GetDowntimeNotificationProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="sitecore\shell\Applications\Content Manager\Dialogs\DowntimeNotification\DowntimeNotification.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
