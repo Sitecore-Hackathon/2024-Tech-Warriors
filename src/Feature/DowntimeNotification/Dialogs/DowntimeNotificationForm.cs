@@ -10,8 +10,10 @@ namespace DowntimeNotification.Dialogs
     public class DowntimeNotificationForm : DialogForm
     {
         Edit Title;
-        DatePicker StartTime;
-        DatePicker EndTime;
+        DateTimePicker StartTimeNotificationMessage;
+        DateTimePicker EndTimeNotificationMessage;
+        DateTimePicker StartTimeMaintenance;
+        DateTimePicker EndTimeMaintenance;
         protected override void OnLoad(EventArgs e)
         {
             Assert.ArgumentNotNull((object)e, nameof(e));
@@ -28,8 +30,10 @@ namespace DowntimeNotification.Dialogs
         {
             DowntimeNotificationFormModel model = new DowntimeNotificationFormModel();
             model.Title = Title.Value;
-            model.StartTime = StartTime.Value;
-            model.EndTime = EndTime.Value;
+            model.StartTimeNotificationMessage = StartTimeNotificationMessage.Value;
+            model.EndTimeNotificationMessage = EndTimeNotificationMessage.Value;
+            model.StartTimeMaintenance = StartTimeMaintenance.Value;
+            model.EndTimeMaintenance = EndTimeMaintenance.Value;
             return model.ToString();
         }
     }

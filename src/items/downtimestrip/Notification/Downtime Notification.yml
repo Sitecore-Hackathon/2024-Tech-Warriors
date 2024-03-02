@@ -1,15 +1,15 @@
 ﻿---
-ID: "cd3591f0-59ed-49ac-b63f-6f19e1082993"
-Parent: "cda16873-6b24-4755-aa6e-23bf419f34eb"
-Template: "ec6d62a5-5d00-4329-8958-8ac1ad100ebb"
-Path: /sitecore/content/Applications/Content Editor/Ribbons/Strips/Notification
+ID: "cfadd424-551f-4c16-a663-7e8c172b9f70"
+Parent: "cd3591f0-59ed-49ac-b63f-6f19e1082993"
+Template: "ef295cd8-19d4-4e02-9438-94c926ef5284"
+Path: /sitecore/content/Applications/Content Editor/Ribbons/Strips/Notification/Downtime Notification
 SharedFields:
-- ID: "12c1ceb4-f549-472a-97ed-99bff70eb84e"
-  Hint: ID
-  Value: Notification
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 0
+- ID: "c9ce97fb-3e8e-4384-9430-7dba75b275dd"
+  Hint: Reference
+  Value: "{D1CF6828-07A9-4395-B44E-0A8659C008F0}"
 Languages:
 - Language: en
   Versions:
@@ -20,24 +20,21 @@ Languages:
       Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20080602T084605
-    - ID: "5453dc07-6a17-48ba-8d05-17db90a2e795"
-      Hint: Header
-      Value: Notification
+      Value: 20080709T115924
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "78e6a2cb-b7ec-4a11-be29-1377dcb8a979"
+      Value: "69767105-d70d-4460-ac3a-4391e59fdbbe"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
       Hint: __Valid from
-      Value: 20060322T185859
+      Value: 20060322T194810
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240302T144141Z
+      Value: 20240302T144217Z

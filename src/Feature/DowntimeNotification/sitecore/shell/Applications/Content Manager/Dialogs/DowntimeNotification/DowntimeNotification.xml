@@ -11,11 +11,19 @@
                     </Border>
                     <Border runat="server"  Margin="8px 0px 8px 0px">
                         <Literal class="scMessageBarText" Text="Start time for the notification message:" />
-                        <DatePicker id="StartTime" name="StartTime" Margin="0px 0px 0px 6px" />
+                        <DateTimePicker id="StartTimeNotificationMessage" name="StartTimeNotificationMessage" Margin="0px 0px 0px 6px" />
                     </Border>
                     <Border runat="server" Margin="8px 0px 8px 0px">
                         <Literal class="scMessageBarText" Text="End time for the notification message: " />
-                        <DatePicker id="EndTime" name="EndTime" Margin="0px 0px 0px 6px" />
+                        <DateTimePicker id="EndTimeNotificationMessage" name="EndTimeNotificationMessage" Margin="0px 0px 0px 6px" />
+                    </Border>
+                    <Border runat="server"  Margin="8px 0px 8px 0px">
+                        <Literal class="scMessageBarText" Text="Start time for the maintenance operation:" />
+                        <DateTimePicker id="StartTimeMaintenance" name="StartTimeMaintenance" Margin="0px 0px 0px 6px" />
+                    </Border>
+                    <Border runat="server" Margin="8px 0px 8px 0px">
+                        <Literal class="scMessageBarText" Text="End time for the maintenance operation: " />
+                        <DateTimePicker id="EndTimeMaintenance" name="EndTimeMaintenance" Margin="0px 0px 0px 6px" />
                     </Border>
                 </div>
             </Scrollbox>
