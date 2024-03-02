@@ -11,6 +11,7 @@ namespace DowntimeNotification
         public const string DowntimeNotificationEnabled = "Downtime Notification has been enabled";
         public const string DowntimeNotificationDisabled = "Downtime Notification has been disabled";
         public const string DowntimeNotificationItemCheck = "Downtime Notification must be enabled before to disable the notification";
+        public const string RootXMLElement = "DowntimeNotification";
         public const string TitleXMLElement = "Title";
         public const string StartTimeNotificationMessageXMLElement = "StartTimeNotificationMessage";
         public const string EndTimeNotificationMessageXMLElement = "EndTimeNotificationMessage";
