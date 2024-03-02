@@ -32,11 +32,11 @@ Sitecore CLI
 
 ⟹ Write a short clear step-wise instruction on how to install your module.
 
-> Go to your sitecore XP
+Login to you XP Instance.
 
-Install the SXA module-https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1030.aspx
+Install the SXA module - https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1030.aspx
 
-Install Sitecore CLI https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx
+Install Sitecore CLI - https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx
 
 Using the package installation wizard, install the Downtime Notification Module [Sitecore_Package/DowntimeNotification.zip ](https://github.com/Sitecore-Hackathon/2024-Tech-Warriors/blob/main/Sitecore_Package/DowntimeNotification.zip)
 
@@ -75,15 +75,23 @@ on successful removal of notification user will be shown success popup
 Contents of DowntimeNotification Package
 
 1. Core database
-   \sitecore\content\Applications\Content Editor\Ribbons\Chunks\DowntimeNotification
-   \sitecore\content\Applications\Content Editor\Ribbons\Ribbons\Default\Notification
-   sitecore\content\Applications\Content Editor\Ribbons\Strips\Notification
+
+    \sitecore\content\Applications\Content Editor\Ribbons\Chunks\DowntimeNotification
+
+    \sitecore\content\Applications\Content Editor\Ribbons\Ribbons\Default\Notification
+
+    sitecore\content\Applications\Content Editor\Ribbons\Strips\Notification
 
 2. Master Database
-   \sitecore\system\Settings\Feature\TechWarriors
-   \sitecore\templates\Feature\TechWarriors
+
+    \sitecore\system\Settings\Feature\TechWarriors
+
+    \sitecore\templates\Feature\TechWarriors
 
 3. Files
-   App_config
-   bin
-   sitecore
+
+    App_config
+
+    bin
+
+    sitecore
