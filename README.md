@@ -26,7 +26,7 @@
 
 -   Sitecore 10 or above
 -   SXA
--   Sitecore CLI
+-   Sitecore CLI (Required for Content Serialization)
 
 ## Installation instructions
 
@@ -42,11 +42,11 @@ Using the package installation wizard, install the Downtime Notification Module 
 
 # Usage instructions
 
-1.To set Notification Message click on the "Notification" from the ribbon:
+1.To set the Notification Message, click on the "Notification" CTA from the ribbon:
 
 ![alt text](image-2.png)
 
-2.To enable the downtime notifications click on "Enable Downtime Notification", this will open up pop up for you as shown.
+2.Next, to enable the downtime notifications click on "Enable Downtime Notification", this will open up pop up for you as shown.
 
 ![alt text](image-3.png)
 
@@ -54,11 +54,11 @@ fill up this details as per your scheduled deployment activity.
 
 ![alt text](image-6.png)
 
-once details are filled click OK. User will be notified with the confirmation message on succesfull cretion of notification.
+once details are filled click OK. User will be notified with the confirmation message on successfull creation of notification.
 
 ![alt text](image-7.png)
 
-3. As per details set for the notification message CM users will be shown a notification message on content editor as well as experience editor.
+3. As per details set for the notification message, content authoring users will be shown a notification message on content editor as well as experience editor.
 
     ![alt text](image-4.png)
 
@@ -87,6 +87,7 @@ on successful removal of notification user will be shown success popup
 
 3. Files
 
-    - App_config
-    - bin
-    - sitecore
+    - App_config/Include/Feature/z.Feature.Downtime.config
+    - bin/DowntimeNotification.dll
+    - sitecore/shell/Applications/Content Manager/Dialogs/DowntimeNotification/DowntimeNotification.xml
+	- sitecore/shell/Applications/Content Manager/Dialogs/notification.js
