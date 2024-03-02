@@ -18,7 +18,7 @@
 
 ⟹ Please find video for the module here:
 
-⟹ [Replace this Video link](#video-link)
+⟹ (#https://www.youtube.com/watch?v=F9CrfPispbY)
 
 ## Pre-requisites and Dependencies
 
@@ -32,11 +32,9 @@
 
 ⟹ Write a short clear step-wise instruction on how to install your module.
 
-Login to you XP Instance.
+Login to you XM/XP Instance.
 
 Install the SXA module - https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1030.aspx
-
-Install Sitecore CLI - https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx
 
 Using the package installation wizard, install the Downtime Notification Module [Sitecore_Package/DowntimeNotification.zip ](https://github.com/Sitecore-Hackathon/2024-Tech-Warriors/blob/main/Sitecore_Package/DowntimeNotification.zip)
 
@@ -44,35 +42,35 @@ Using the package installation wizard, install the Downtime Notification Module 
 
 1.To set the Notification Message, click on the "Notification" CTA from the ribbon:
 
-![alt text](image-2.png)
+![alt text](docs/images/image-2.png)
 
 2.Next, to enable the downtime notifications click on "Enable Downtime Notification", this will open up pop up for you as shown.
 
-![alt text](image-3.png)
+![alt text](docs/images/image-3.png)
 
-![alt text](image-10.png)
+![alt text](docs/images/image-10.png)
 
 fill up this details as per your scheduled deployment activity.
 
-![alt text](image-6.png)
+![alt text](docs/images/image-6.png)
 
 once details are filled click OK. User will be notified with the confirmation message on successfull creation of notification.
 
-![alt text](image-7.png)
+![alt text](docs/images/image-7.png)
 
 3. As per details set for the notification message, content authoring users will be shown a notification message on content editor as well as experience editor.
 
-    ![alt text](image-4.png)
+    ![alt text](docs/images/image-4.png)
 
-    ![alt text](image-9.png)
+    ![alt text](docs/images/image-9.png)
 
 4. To Disable the notification click on "Disable Downtime Notification" as shown in ribbon
 
-    ![alt text](image-5.png)
+    ![alt text](docs/images/image-5.png)
 
 on successful removal of notification user will be shown success popup
 
-![alt text](image-8.png)
+![alt text](docs/images/image-8.png)
 
 # Contents of DowntimeNotification Package
 
