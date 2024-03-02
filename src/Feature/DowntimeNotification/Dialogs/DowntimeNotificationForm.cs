@@ -26,6 +26,10 @@ namespace DowntimeNotification.Dialogs
             SheerResponse.SetDialogValue(this.GetDialogResult());
             base.OnOK(sender, args);
         }
+        /// <summary>
+        /// Set the Dialog Result as XML
+        /// </summary>
+        /// <returns></returns>
         protected string GetDialogResult()
         {
             DowntimeNotificationFormModel model = new DowntimeNotificationFormModel();

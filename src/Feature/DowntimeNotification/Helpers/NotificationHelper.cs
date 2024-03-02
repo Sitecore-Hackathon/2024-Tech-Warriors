@@ -22,7 +22,9 @@ namespace DowntimeNotification.Helpers
         private Sitecore.Data.Fields.DateField EndTimeNotificationMessage;
         private Sitecore.Data.Fields.DateField StartTimeMaintenance;
         private Sitecore.Data.Fields.DateField EndTimeMaintenance;
-
+        /// <summary>
+        /// Flag to show/hide notification
+        /// </summary>
         public bool ShowNotification
         {
             get
@@ -52,11 +54,14 @@ namespace DowntimeNotification.Helpers
                 return true;
             }
         }
-
-        public String GetNotificationMessage()
+        /// <summary>
+        /// Gets the notification message
+        /// </summary>
+        /// <returns>string</returns>
+        public string GetNotificationMessage()
         {            
             var title = Sitecore.StringUtil.GetString(NotificationItem[Templates.DowntimeNotificationItem.Fields.Title], string.Empty);
-            return $"{title}: Start time: {StartTimeMaintenance} UTC, End time: {EndTimeMaintenance}";
+            return $"{title}: Start time: {StartTimeMaintenance} UTC, End time: {EndTimeMaintenance} UTC";
         }
     }
 }
