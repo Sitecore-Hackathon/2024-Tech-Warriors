@@ -13,7 +13,7 @@
                 <div class="scInformation">
                     <Border runat="server"  Margin="12px 0px 12px 0px">
                         <Literal class="scMessageBarText notification-bold-text" Text="Configure the title for the notification message:" />
-                        <Edit id="Title" name="Title" Margin="0px 6px 0px 6px"/>
+                        <Edit id="Title" name="Title" Margin="6px 0px 6px 0px"/>
                     </Border>
                     <Border runat="server"  Margin="12px 0px 12px 0px">
                         <Literal class="scMessageBarText notification-bold-text" Text="Configure the start time for the notification message:" />
