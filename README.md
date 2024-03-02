@@ -20,10 +20,9 @@
 
 ⟹ Does your module rely on other Sitecore modules or frameworks?
 
-Sitecore XP
+Sitecore 10 or above -https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/103/Sitecore_Experience_Platform_103_Update1.aspx
 SXA
-
-_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
+Sitecore CLI
 
 ## Installation instructions
 
@@ -31,15 +30,29 @@ _Remove this subsection if your entry does not have any prerequisites other than
 
 > In a Sitecore XP Instance
 
-Install the SXA module
-Using the package installation wizard, install the Downtime Notification Module (link)
+Install the SXA module-https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1030.aspx
+Install Sitecore CLI https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx
 Using the package installation wizard, install the Downtime Notification Module (link)
 
 Usage instructions
 
-1. We need to set up details for the scheduled deploymnet activity details.
-   ![alt text](image-1.png)
+1.To set Notification Message click on the "Notification" from the ribbon:
+![alt text](image-2.png)
 
-Contents of Downtime Notification Module
+2.To enable the downtime notifications click on "Enable Downtime Notification", this will open up pop up for you as shown.
+![alt text](image-3.png)
 
-Contents of Downtime Notification Module package
+fill up this details as per your scheduled deployment activity.
+![alt text](image-6.png)
+
+once details are filled click OK. User will be notified with the confirmation message on succesfull cretion of notification.
+![alt text](image-7.png)
+
+3. As per details set for the notification message CM users will be shown a notification message
+   ![alt text](image-4.png)
+
+4. To Disable the notification click on "Disable Downtime Notification" as shown in ribbon
+   ![alt text](image-5.png)
+
+on successful removal of notification user will be shown success popup
+![alt text](image-8.png)
