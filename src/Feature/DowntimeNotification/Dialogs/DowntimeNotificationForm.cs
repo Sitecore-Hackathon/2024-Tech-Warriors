@@ -14,11 +14,21 @@ namespace DowntimeNotification.Dialogs
         DateTimePicker EndTimeNotificationMessage;
         DateTimePicker StartTimeMaintenance;
         DateTimePicker EndTimeMaintenance;
+        /// <summary>
+        /// On Form Load
+        /// </summary>
+        /// <param name="e">EventArgs</param>
         protected override void OnLoad(EventArgs e)
         {
             Assert.ArgumentNotNull((object)e, nameof(e));
             base.OnLoad(e);
         }
+
+        /// <summary>
+        /// OnOk Callback
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="args">EventArgs</param>
         protected override void OnOK(object sender, EventArgs args)
         {
             Assert.ArgumentNotNull(sender, nameof(sender));
@@ -26,6 +36,7 @@ namespace DowntimeNotification.Dialogs
             SheerResponse.SetDialogValue(this.GetDialogResult());
             base.OnOK(sender, args);
         }
+
         /// <summary>
         /// Set the Dialog Result as XML
         /// </summary>

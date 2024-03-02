@@ -12,10 +12,19 @@ namespace DowntimeNotification.Commands
 {
     public class TriggerDowntimeNotification : Command
     {
+        /// <summary>
+        /// Executes the command
+        /// </summary>
+        /// <param name="context">CommandContext</param>
         public override void Execute(CommandContext context)
         {
             Context.ClientPage.Start((object)this, "Run");
         }
+
+        /// <summary>
+        /// Triggers the Modal Dialog
+        /// </summary>
+        /// <param name="args">ClientPipelineArgs</param>
         protected virtual void Run(ClientPipelineArgs args)
         {
             if (args.IsPostBack)

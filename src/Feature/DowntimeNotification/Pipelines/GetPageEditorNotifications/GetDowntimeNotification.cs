@@ -6,6 +6,10 @@ namespace DowntimeNotification.Pipelines.GetPageEditorNotifications
 {
     public class GetDowntimeNotification : GetPageEditorNotificationsProcessor
     {
+        /// <summary>
+        /// Handles notification in Experience Editor
+        /// </summary>
+        /// <param name="args">GetPageEditorNotificationsArgs</param>
         public override void Process(GetPageEditorNotificationsArgs args)
         {
             Assert.ArgumentNotNull((object)args, nameof(args));
