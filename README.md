@@ -18,7 +18,7 @@
 
 ⟹ Please find video for the module here:
 
-⟹ https://www.youtube.com/watch?v=F9CrfPispbY
+https://www.youtube.com/watch?v=F9CrfPispbY
 
 ## Pre-requisites and Dependencies
 
