@@ -11,7 +11,7 @@ namespace DowntimeNotification.Models
         public string EndTimeMaintenance;
         public override string ToString()
         {
-            XElement element = new XElement("DowntimeNotification");
+            XElement element = new XElement(Constants.RootXMLElement);
             if (!string.IsNullOrEmpty(this.Title))
                 element.Add(new XElement(Constants.TitleXMLElement, this.Title));
             if (!string.IsNullOrEmpty(this.StartTimeNotificationMessage))
