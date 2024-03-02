@@ -36,12 +36,26 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\..\..\lib\Sitecore.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
       <HintPath>..\..\..\lib\Sitecore.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Config\Include\Feature\DowntimeNotification.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pipelines\GetContentEditorWarnings\GetDowntimeNotificationProcessor.cs" />
+    <Compile Include="Pipelines\RenderContentEditorHeader\GetDowntimeNotificationProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\notification.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
