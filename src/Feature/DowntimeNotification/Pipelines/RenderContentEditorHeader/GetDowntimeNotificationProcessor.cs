@@ -8,6 +8,10 @@ namespace DowntimeNotification.Pipelines.RenderContentEditorHeader
 {
     public class GetDowntimeNotificationProcessor
     {
+        /// <summary>
+        /// Handles notification in Content Editor
+        /// </summary>
+        /// <param name="args"></param>
         public void Process(RenderContentEditorHeaderArgs args)
         {
             Assert.ArgumentNotNull(args, nameof(args));

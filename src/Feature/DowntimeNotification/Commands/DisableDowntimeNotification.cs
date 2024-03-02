@@ -10,10 +10,19 @@ namespace DowntimeNotification.Commands
 {
     public class DisableDowntimeNotification : Command
     {
+        /// <summary>
+        /// Executes the command
+        /// </summary>
+        /// <param name="context">CommandContext</param>
         public override void Execute(CommandContext context)
         {
             Context.ClientPage.Start((object)this, "Run");
         }
+
+        /// <summary>
+        /// Disables the IsEnabled check on Notification Item
+        /// </summary>
+        /// <param name="args">ClientPipelineArgs</param>
         protected virtual void Run(ClientPipelineArgs args)
         {
             if (args.IsPostBack)
