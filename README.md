@@ -13,6 +13,7 @@
 ## Description
 
 ⟹ The "Downtime Notification Module" is indispensable for CM, proactively informing users, particularly content authors, about upcoming maintenance/downtime on CMS. By minimizing disruptions, preventing data loss, and ensuring compliance, this module fosters transparent communication and a seamless user experience. Its customization and scalability features further enhance adaptability to evolving system requirements
+
 ⟹ This module will help Content Authors to receive a notification prior for CMS downtime, so that they can better plan their content authoring activities in the upcoming days.
 
 ## Video link
