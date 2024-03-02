@@ -1,0 +1,30 @@
+{
+    "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Feature.DowntimeNotification",
+    "items": {
+        "includes": [
+            {
+                "name": "downtimestrip",
+                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Strips/Home/Notification",
+                "allowedPushOperations" : "CreateUpdateAndDelete",
+				"database": "core"
+            },
+			{
+                "name": "downtimechunk",
+                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Notification",
+                "allowedPushOperations" : "CreateUpdateAndDelete",
+				"database": "core"
+            },
+			{
+                "name": "downtimetemplate",
+                "path": "/sitecore/templates/Feature/TechWarriors",
+                "allowedPushOperations" : "CreateUpdateAndDelete"
+            },
+			{
+                "name": "downtimesettings",
+                "path": "/sitecore/system/Settings/Feature/TechWarriors",
+                "allowedPushOperations" : "CreateUpdateAndDelete"
+            },
+        ]
+    },
+}
