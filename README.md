@@ -1,6 +1,6 @@
 ![alt text](docs/images/hackathon.png)
 
-Sitecore Hackathon 2024
+# Sitecore Hackathon 2024
 
 ## Team name
 
@@ -40,7 +40,7 @@ Install Sitecore CLI - https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx
 
 Using the package installation wizard, install the Downtime Notification Module [Sitecore_Package/DowntimeNotification.zip ](https://github.com/Sitecore-Hackathon/2024-Tech-Warriors/blob/main/Sitecore_Package/DowntimeNotification.zip)
 
-Usage instructions
+# Usage instructions
 
 1.To set Notification Message click on the "Notification" from the ribbon:
 
@@ -72,26 +72,21 @@ on successful removal of notification user will be shown success popup
 
 ![alt text](image-8.png)
 
-Contents of DowntimeNotification Package
+# Contents of DowntimeNotification Package
 
 1. Core database
 
-    \sitecore\content\Applications\Content Editor\Ribbons\Chunks\DowntimeNotification
-
-    \sitecore\content\Applications\Content Editor\Ribbons\Ribbons\Default\Notification
-
-    sitecore\content\Applications\Content Editor\Ribbons\Strips\Notification
+    - \sitecore\content\Applications\Content Editor\Ribbons\Chunks\DowntimeNotification
+    - \sitecore\content\Applications\Content Editor\Ribbons\Ribbons\Default\Notification
+    - sitecore\content\Applications\Content Editor\Ribbons\Strips\Notification
 
 2. Master Database
 
-    \sitecore\system\Settings\Feature\TechWarriors
-
-    \sitecore\templates\Feature\TechWarriors
+    - \sitecore\system\Settings\Feature\TechWarriors
+    - \sitecore\templates\Feature\TechWarriors
 
 3. Files
 
-    App_config
-
-    bin
-
-    sitecore
+    - App_config
+    - bin
+    - sitecore
