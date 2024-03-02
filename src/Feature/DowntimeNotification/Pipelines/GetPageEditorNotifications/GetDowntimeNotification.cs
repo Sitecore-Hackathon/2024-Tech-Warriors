@@ -1,16 +1,15 @@
 ﻿using DowntimeNotification.Helpers;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines.GetPageEditorNotifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DowntimeNotification.Pipelines.GetPageEditorNotifications
 {
     public class GetDowntimeNotification : GetPageEditorNotificationsProcessor
     {
+        /// <summary>
+        /// Handles notification in Experience Editor
+        /// </summary>
+        /// <param name="args">GetPageEditorNotificationsArgs</param>
         public override void Process(GetPageEditorNotificationsArgs args)
         {
             Assert.ArgumentNotNull((object)args, nameof(args));

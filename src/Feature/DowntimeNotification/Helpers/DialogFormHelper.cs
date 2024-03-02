@@ -7,6 +7,11 @@ namespace DowntimeNotification.Helpers
 {
     public static class DialogFormHelper
     {
+        /// <summary>
+        /// Parse the XML response
+        /// </summary>
+        /// <param name="result">string</param>
+        /// <returns>DowntimeNotificationFormModel</returns>
         public static DowntimeNotificationFormModel Parse(string result)
         {
             Assert.ArgumentNotNull((object)result, nameof(result));
@@ -19,16 +24,28 @@ namespace DowntimeNotification.Helpers
                 downtimeNotificationFormModel.Title = title.FirstNode.ToString();
             }
 
-            var startTime = root.Elements().Where(x => x.Name == "StartTime")?.FirstOrDefault();
-            if (startTime != null)
+            var startTimeNotifcationMessage = root.Elements().Where(x => x.Name == "StartTimeNotificationMessage")?.FirstOrDefault();
+            if (startTimeNotifcationMessage != null)
             {
-                downtimeNotificationFormModel.StartTime = startTime.FirstNode.ToString();
+                downtimeNotificationFormModel.StartTimeNotificationMessage = startTimeNotifcationMessage.FirstNode.ToString();
             }
 
-            var endTime = root.Elements().Where(x => x.Name == "EndTime")?.FirstOrDefault();
-            if (endTime != null)
+            var endTimeNotificationMessage = root.Elements().Where(x => x.Name == "EndTimeNotificationMessage")?.FirstOrDefault();
+            if (endTimeNotificationMessage != null)
             {
-                downtimeNotificationFormModel.EndTime = endTime.FirstNode.ToString();
+                downtimeNotificationFormModel.EndTimeNotificationMessage = endTimeNotificationMessage.FirstNode.ToString();
+            }
+
+            var startTimeMaintenance = root.Elements().Where(x => x.Name == "StartTimeMaintenance")?.FirstOrDefault();
+            if (endTimeNotificationMessage != null)
+            {
+                downtimeNotificationFormModel.StartTimeMaintenance = startTimeMaintenance.FirstNode.ToString();
+            }
+
+            var endTimeMaintenance = root.Elements().Where(x => x.Name == "EndTimeMaintenance")?.FirstOrDefault();
+            if (endTimeNotificationMessage != null)
+            {
+                downtimeNotificationFormModel.EndTimeMaintenance = endTimeMaintenance.FirstNode.ToString();
             }
 
             return downtimeNotificationFormModel;

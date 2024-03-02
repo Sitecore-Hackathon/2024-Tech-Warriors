@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{7D930AD7-8BA9-4A56-98DF-467748F362DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreExtensions", "src\Foundation\SitecoreExtensions\SitecoreExtensions.csproj", "{08DC056F-1A63-4E23-8879-0380B7989BAC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DowntimeNotification", "src\Feature\DowntimeNotification\DowntimeNotification.csproj", "{027839ED-1758-4785-BD96-D97625A27076}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08DC056F-1A63-4E23-8879-0380B7989BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08DC056F-1A63-4E23-8879-0380B7989BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08DC056F-1A63-4E23-8879-0380B7989BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08DC056F-1A63-4E23-8879-0380B7989BAC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{027839ED-1758-4785-BD96-D97625A27076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{027839ED-1758-4785-BD96-D97625A27076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027839ED-1758-4785-BD96-D97625A27076}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,7 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{08DC056F-1A63-4E23-8879-0380B7989BAC} = {FB11C5AC-64FA-4DB2-AE42-448DE221F7B9}
 		{027839ED-1758-4785-BD96-D97625A27076} = {7DF74DB4-0251-459A-AD8C-F5B1D4E59592}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

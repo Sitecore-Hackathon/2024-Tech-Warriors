@@ -6,19 +6,25 @@ using Sitecore.Data.Items;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
-using System;
-using System.Collections.Specialized;
 using System.Linq;
 
 namespace DowntimeNotification.Commands
 {
     public class TriggerDowntimeNotification : Command
     {
+        /// <summary>
+        /// Executes the command
+        /// </summary>
+        /// <param name="context">CommandContext</param>
         public override void Execute(CommandContext context)
         {
-            NameValueCollection parameters = new NameValueCollection();
-            Context.ClientPage.Start((object)this, "Run", parameters);
+            Context.ClientPage.Start((object)this, "Run");
         }
+
+        /// <summary>
+        /// Triggers the Modal Dialog
+        /// </summary>
+        /// <param name="args">ClientPipelineArgs</param>
         protected virtual void Run(ClientPipelineArgs args)
         {
             if (args.IsPostBack)
@@ -31,15 +37,19 @@ namespace DowntimeNotification.Commands
                 {
                     this.CreateUpdateItem(downtimeDataResult);
                 }
+                SheerResponse.Alert("Downtime Notification has been enabled");
             }
             else
             {
                 UrlString urlString = new UrlString(UIUtil.GetUri("control:DowntimeNotification"));
-                SheerResponse.ShowModalDialog(urlString.ToString(), "600px", "350px", string.Empty, true);
+                SheerResponse.ShowModalDialog(urlString.ToString(), "625px", "510px", string.Empty, true);
                 args.WaitForPostBack();
             }
         }
-
+        /// <summary>
+        /// Creates/Updates the Notification Item
+        /// </summary>
+        /// <param name="downtimeDataResult">DowntimeNotificationFormModel</param>
         private void CreateUpdateItem(DowntimeNotificationFormModel downtimeDataResult)
         {
             Database db = Client.ContentDatabase;
@@ -47,41 +57,16 @@ namespace DowntimeNotification.Commands
             if (downtimeSettingsItem != null)
             {
                 Item downtimeItem = downtimeSettingsItem.Children.Where(x => x.TemplateID == Templates.DowntimeNotificationItem.Id)?.FirstOrDefault();
-                using (new Sitecore.SecurityModel.SecurityDisabler())
+                if (downtimeItem != null)
                 {
-                    try
-                    {
-                        if (downtimeItem != null)
-                        {
-                            downtimeItem.Editing.BeginEdit();
-                            downtimeItem["Title"] = downtimeDataResult.Title;
-                            downtimeItem["StartTime"] = downtimeDataResult.StartTime;
-                            downtimeItem["EndTime"] = downtimeDataResult.EndTime;
-                            downtimeItem["IsEnabled"] = "1";
-                            downtimeItem.Editing.EndEdit();
-                        }
-                        else
-                        {
-                            string itemName = $"DownTimeNofication";
-                            var template = db.GetTemplate(Templates.DowntimeNotificationItem.Id);
-                            Item newItem = downtimeSettingsItem.Add(itemName, template);
-                            if (newItem != null)
-                            {
-                                newItem.Editing.BeginEdit();
-                                newItem["Title"] = downtimeDataResult.Title;
-                                newItem["StartTime"] = downtimeDataResult.StartTime;
-                                newItem["EndTime"] = downtimeDataResult.EndTime;
-                                newItem["IsEnabled"] = "1";
-                                newItem.Editing.EndEdit();
-                            }
-                        }
-                    }
-                    catch(Exception ex)
-                    {
-                        Sitecore.Diagnostics.Log.Error("Exception During Saving/Creating Notification Item", ex, this);
-                    }
+                    ItemHelper.UpdateNotificationItem(downtimeItem, downtimeDataResult.Title, downtimeDataResult.StartTimeNotificationMessage, downtimeDataResult.EndTimeNotificationMessage, downtimeDataResult.StartTimeMaintenance, downtimeDataResult.EndTimeMaintenance, "1");
+                }
+                else
+                {
+                    ItemHelper.CreateNotificationItem(db, downtimeSettingsItem, "DownTimeNofication", downtimeDataResult.Title, downtimeDataResult.StartTimeNotificationMessage, downtimeDataResult.EndTimeNotificationMessage, downtimeDataResult.StartTimeMaintenance, downtimeDataResult.EndTimeMaintenance, "1");
                 }
             }
         }
     }
 }
+

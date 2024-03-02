@@ -3,15 +3,21 @@
     "namespace": "Feature.DowntimeNotification",
     "items": {
         "includes": [
+		    {
+                "name": "downtimeribbon",
+                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Ribbons/Default/Notification",
+                "allowedPushOperations" : "CreateUpdateAndDelete",
+				"database": "core"
+            },
             {
                 "name": "downtimestrip",
-                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Strips/Home/Notification",
+                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Strips/Notification",
                 "allowedPushOperations" : "CreateUpdateAndDelete",
 				"database": "core"
             },
 			{
                 "name": "downtimechunk",
-                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Notification",
+                "path": "/sitecore/content/Applications/Content Editor/Ribbons/Chunks/DowntimeNotification",
                 "allowedPushOperations" : "CreateUpdateAndDelete",
 				"database": "core"
             },
